@@ -14,7 +14,10 @@ function App() {
 
   useEffect(() => {
     const fetchWordList = async () => {
-      const response = await fetch('/words.txt');
+      const baseUrl = import.meta.env.MODE === 'production' ? import.meta.env.BASE_URL : '';
+
+      const response = await fetch(`${baseUrl}words.txt`);
+
       const text = await response.text();
       setWordList(text.split('\n'));
     };
