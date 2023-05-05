@@ -151,10 +151,10 @@ function App() {
   };
 
   return (
-    <div className=" px-6 py-12 lg:px-8">
+    <div className=" px-6 py-10 lg:px-8">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Letter Boxed Helper</h2>
-        <p className="mt-6 text-lg leading-8 text-gray-600">
+        <p className="mt-2 text-lg leading-6 text-gray-600">
           Put letters from each side of the box in the corresponding set. Only put letters; no spaces or commas.
         </p>
         <div className=" flex flex-col">
