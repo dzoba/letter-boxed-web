@@ -7,5 +7,8 @@ export default defineConfig({
   base: '/letter-boxed-web/',
   build: {
     outDir: 'docs'
+  },
+  server: {
+    host: true
   }
 })
