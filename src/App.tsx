@@ -26,20 +26,20 @@ function App() {
   }, []);
 
   const onChangeA = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setA(new Set(event.target.value.split('').map((value) => value.trim())));
+    setA(new Set(event.target.value.toLowerCase().split('').map((value) => value.trim())));
 
   };
 
   const onChangeB = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setB(new Set(event.target.value.split('').map((value) => value.trim())));
+    setB(new Set(event.target.value.toLowerCase().split('').map((value) => value.trim())));
   };
 
   const onChangeC = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setC(new Set(event.target.value.split('').map((value) => value.trim())));
+    setC(new Set(event.target.value.toLowerCase().split('').map((value) => value.trim())));
   };
 
   const onChangeD = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setD(new Set(event.target.value.split('').map((value) => value.trim())));
+    setD(new Set(event.target.value.toLowerCase().split('').map((value) => value.trim())));
   };
 
   const handleClick = () => {
@@ -159,67 +159,72 @@ function App() {
         </p>
         <div className=" flex flex-col">
 
-          <div className="mt-4">
-            <label htmlFor="setA" className="text-sm font-medium leading-6 text-gray-900">
-              Top
-            </label>
-            <div className="">
-              <input
-                maxLength={3}
-                id="setA"
-                name="setA"
-                onChange={onChangeA}
-                className="pl-2 rounded-md border-2 md:border-0 border-slate-300 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
+          <form>
+            <div className="mt-4">
+              <label htmlFor="setA" className="text-sm font-medium leading-6 text-gray-900">
+                Top
+              </label>
+              <div className="">
+                <input
+                  maxLength={3}
+                  id="setA"
+                  name="setA"
+                  onChange={onChangeA}
+                  autoCapitalize="off"
+                  className="pl-2 rounded-md border-2 md:border-0 border-slate-300 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                />
+              </div>
             </div>
-          </div>
 
-          <div className="mt-4">
-            <label htmlFor="setB" className="text-sm font-medium leading-6 text-gray-900">
-              Bottom
-            </label>
-            <div className="">
-              <input
-                maxLength={3}
-                id="setB"
-                name="setB"
-                onChange={onChangeB}
-                className="pl-2 rounded-md border-2 md:border-0 border-slate-300 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
+            <div className="mt-4">
+              <label htmlFor="setB" className="text-sm font-medium leading-6 text-gray-900">
+                Bottom
+              </label>
+              <div className="">
+                <input
+                  maxLength={3}
+                  id="setB"
+                  name="setB"
+                  onChange={onChangeB}
+                  autoCapitalize="off"
+                  className="pl-2 rounded-md border-2 md:border-0 border-slate-300 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                />
+              </div>
             </div>
-          </div>
 
-          <div className="mt-4">
-            <label htmlFor="setC" className="text-sm font-medium leading-6 text-gray-900">
-              Left
-            </label>
-            <div className="">
-              <input
-                maxLength={3}
-                id="setC"
-                name="setC"
-                onChange={onChangeC}
-                className="pl-2 rounded-md border-2 md:border-0 border-slate-300 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
+            <div className="mt-4">
+              <label htmlFor="setC" className="text-sm font-medium leading-6 text-gray-900">
+                Left
+              </label>
+              <div className="">
+                <input
+                  maxLength={3}
+                  id="setC"
+                  name="setC"
+                  onChange={onChangeC}
+                  autoCapitalize="off"
+                  className="pl-2 rounded-md border-2 md:border-0 border-slate-300 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                />
+              </div>
             </div>
-          </div>
 
-          <div className="mt-4">
-            <label htmlFor="setD" className="text-sm font-medium leading-6 text-gray-900">
-              Right
-            </label>
-            <div className="">
-              <input
-                maxLength={3}
-                id="setD"
-                name="setD"
-                onChange={onChangeD}
-                className="pl-2 rounded-md border-2 md:border-0 border-slate-300 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
+            <div className="mt-4">
+              <label htmlFor="setD" className="text-sm font-medium leading-6 text-gray-900">
+                Right
+              </label>
+              <div className="">
+                <input
+                  maxLength={3}
+                  id="setD"
+                  name="setD"
+                  onChange={onChangeD}
+                  autoCapitalize="off"
+                  className="pl-2 rounded-md border-2 md:border-0 border-slate-300 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                />
+              </div>
             </div>
-          </div>
 
-
+          </form>
           <div>
             <button
               className="rounded-md mt-5 bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
